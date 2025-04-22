@@ -21,7 +21,7 @@ var invulnerable: bool = false
 func _ready():
   state_machine.initialize(self)
   player = PlayerManager.player
-  hit_box.Damaged.connect(_take_damage)
+  hit_box.damage.connect(_take_damage)
 
 func _process(_delta):
   pass
