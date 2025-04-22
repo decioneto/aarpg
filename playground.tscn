@@ -1,15 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://b71afsxkdsox3"]
+[gd_scene load_steps=6 format=3 uid="uid://b71afsxkdsox3"]
 
-[ext_resource type="PackedScene" uid="uid://vt7t7e81hnlc" path="res://player.tscn" id="1_rupst"]
+[ext_resource type="Script" uid="uid://bpcbgwowk3evd" path="res://Levels/scripts/level.gd" id="1_o00ia"]
 [ext_resource type="PackedScene" uid="uid://cltera1pjjop6" path="res://Tile Maps/glass-01.tscn" id="2_wt17y"]
 [ext_resource type="PackedScene" uid="uid://bl77mbvonwrtf" path="res://Props/Plants/plant.tscn" id="3_m8u5f"]
 [ext_resource type="PackedScene" uid="uid://pxjmv143hbvp" path="res://Enemies/slime/slime.tscn" id="4_is3ju"]
+[ext_resource type="PackedScene" uid="uid://b5wsdok5b8trx" path="res://Levels/player_spawn.tscn" id="4_o00ia"]
 
 [node name="Playground" type="Node2D"]
 y_sort_enabled = true
-
-[node name="Player" parent="." instance=ExtResource("1_rupst")]
-position = Vector2(198, 135)
+script = ExtResource("1_o00ia")
 
 [node name="Glass-01" parent="." instance=ExtResource("2_wt17y")]
 position = Vector2(1, 27)
@@ -29,3 +28,6 @@ position = Vector2(359, 288)
 
 [node name="Slime" parent="." instance=ExtResource("4_is3ju")]
 position = Vector2(176, 40)
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("4_o00ia")]
+position = Vector2(240, 299)
